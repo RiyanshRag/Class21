@@ -16,6 +16,9 @@ function setup() {
   world = engine.world;
   
   ground =new Ground(width/2,370,width,10);
+  top = new Ground(width/2,20,width,20)
+  left_wall = new Ground(20,height/2,20,height);
+  right_wall = new Ground(1180,height/2,20,height);
   left = new Ground(900,327,10,75)
   right = new Ground(1050,327,10,75)
 
@@ -36,7 +39,7 @@ function setup() {
 
 function keyPressed() {
   if (keyCode === (UP_ARROW)){
-    Matter.Body.applyForce(ball,{x:0,y:0},{x:18,y:-20})
+    Matter.Body.applyForce(ball,{x:0,y:0},{x:18,y:-15 })
   }
 }
 
